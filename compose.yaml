@@ -1,0 +1,32 @@
+services:
+    devbox:
+        image: healthsamurai/aidboxone:stable
+        depends_on:
+            - devbox-db
+        links:
+            - 'devbox-db:database'
+        ports:
+            - '127.0.0.1:8080:8080'
+        env_file:
+            - ./env/aidbox
+            - .env
+        volumes:
+            - ./zenproject:/zenproject
+    devbox-db:
+        image: 'healthsamurai/aidboxdb:13.2'
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: devbox
+    devbox-healthcheck:
+        image: curlimages/curl
+        entrypoint: /bin/sleep 10000
+        links:
+            - devbox
+        depends_on:
+            - devbox
+        healthcheck:
+            test: curl --fail http://devbox:8080/health || exit 1
+            interval: 5s
+            timeout: 30s
+            retries: 100

@@ -1,0 +1,11 @@
+{ns system
+ import #{aidbox
+          aidbox.rest
+          aidbox.search-parameter.v1
+          aidbox.repository.v1
+          hl7-fhir-au-core
+          zen.fhir}
+
+ box
+ {:zen/tags #{aidbox/system}
+  :zen/desc "AU Core"}}

@@ -1,0 +1,2 @@
+{:deps {hl7-fhir-au-core "https://github.com/zen-fhir/hl7-fhir-au-core.git"
+        hl7-terminology-r4 "git@github.com:zen-fhir/hl7-terminology-r4.git"}}
