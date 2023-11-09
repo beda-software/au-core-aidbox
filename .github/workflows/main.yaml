@@ -1,4 +1,4 @@
-name: Deploy EMR and SDC-IDE configs
+name: Deploy Aidbox with AU Core profile
 on:
   push:
     branches:
