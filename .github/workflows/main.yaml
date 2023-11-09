@@ -27,4 +27,4 @@ jobs:
             echo "AIDBOX_ZEN_DEV_MODE=disable" >> .env
             docker compose pull -q
             docker compose stop
-            docekr compose up -d
+            docker compose up -d
