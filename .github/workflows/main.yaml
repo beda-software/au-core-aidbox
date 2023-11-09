@@ -22,6 +22,7 @@ jobs:
           script_stop: true
           script: |
             cd ~/au-core-aidbox
+            git pull
             echo "AIDBOX_LICENSE=$AIDBOX_LICENSE" > .env
             echo "BOX_FEATURES_FTR_PULL_ENABLE=true" >> .env
             echo "AIDBOX_ZEN_DEV_MODE=disable" >> .env
