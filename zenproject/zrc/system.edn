@@ -8,4 +8,11 @@
 
  box
  {:zen/tags #{aidbox/system}
-  :zen/desc "AU Core"}}
+  :zen/desc "AU Core"
+  :services {:public-access public-access}}
+
+ public-access
+ {:zen/tags #{aidbox/service}
+  :engine   aidbox/seed-v2
+  :resources
+  {:AccessPolicy {:allow-any-user {:engine "allow"}}}}}
