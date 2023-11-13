@@ -1,3 +1,4 @@
 zenproject/zen-packages
+client/.ipynb_checkpoints
 .env
 letsencrypt
