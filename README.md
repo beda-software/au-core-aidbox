@@ -13,7 +13,11 @@ Password: `password`
 ## Local environment
 To run it locally you will need a license that you can get here [aidbox.app](https://aidbox.app/ui/portal#/signin)   
 Then add a `.env` file that contains the store license key in the `AIDBOX_LICENSE` variable.   
+If you are a Windows user, you should create a `.env.windows` file. This file will include the `HOST_OS=Windows`, which explicitly informs the application that it is operating within a Windows system.
+
 Run aidbox with docker: `docker compose up`   
+
+If docker is not already installed on your system, you can download and install it from the official docker [website](https://docs.docker.com/get-docker/)
 
 ## SMART launch track
 For the smart launch track I have prepared a simple SMART on FHIR app that just loads a list of patients.
