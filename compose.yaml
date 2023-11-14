@@ -54,7 +54,7 @@ services:
     smart-app:
       build: ./smart
       env_file:
-          - .env.windows
+          - .env
       command: npm run dev
       ports: 
       - "5173:5173"

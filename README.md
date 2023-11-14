@@ -13,7 +13,6 @@ Password: `password`
 ## Local environment
 To run it locally you will need a license that you can get here [aidbox.app](https://aidbox.app/ui/portal#/signin)   
 Then add a `.env` file that contains the store license key in the `AIDBOX_LICENSE` variable.   
-If you are a Windows user, you should create a `.env.windows` file. This file will include the `HOST_OS=Windows`, which explicitly informs the application that it is operating within a Windows system.
 
 Run aidbox with docker: `docker compose up`   
 
@@ -27,4 +26,4 @@ You can launch it locally with npm, or use smart-app docker compose profile
 docker compose --profile smart-app up
 ```
 The app launches in dev mode so any changes in the source code will be represented in the browser.
- 
+If you are a Windows user, you should  add `HOST_OS=Windows` into .env file. It enable file polling that is required for code reload in Windoes.
