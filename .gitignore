@@ -2,3 +2,4 @@ zenproject/zen-packages
 client/.ipynb_checkpoints
 .env
 letsencrypt
+smart/node_modules
