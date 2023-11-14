@@ -45,3 +45,20 @@ services:
           condition:
             service_healthy
       profiles: ["production"]
+    smart-app-deps:
+      image: node:18
+      command: bash -c "cd /app && npm install"
+      volumes:
+      - ./smart:/app
+      profiles: ["smart-app"]
+    smart-app:
+      build: ./smart
+      command: npm run dev
+      ports: 
+      - "5173:5173"
+      volumes:
+      - ./smart:/app
+      depends_on:
+        smart-app-deps:
+          condition: service_completed_successfully
+      profiles: ["smart-app"]
