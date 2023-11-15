@@ -10,6 +10,7 @@
  {:zen/tags #{aidbox/system}
   :zen/desc "AU Core"
   :services {:public-access public-access
+             :allow-rpc allow-rpc
              :smart-app smart-app}}
 
  public-access
@@ -17,6 +18,13 @@
   :engine   aidbox/seed-v2
   :resources
   {:AccessPolicy {:allow-any-user {:engine "allow"}}}}
+
+ allow-rpc
+ {:zen/tags #{aidbox/service}
+  :engine   aidbox/seed-v2
+  :resources
+  {:AccessPolicy {:allow-rpc {:engine "json-schema"
+                              :schema {:uri {:constant "/rpc"}}}}}}
 
  smart-app
  {:zen/tags #{aidbox/service}
