@@ -25,6 +25,7 @@ jobs:
             git pull
             echo "AIDBOX_LICENSE=$AIDBOX_LICENSE" > .env
             echo "BOX_FEATURES_FTR_PULL_ENABLE=true" >> .env
+            echo "AIDBOX_BASE_URL=https://au-core.beda.software" >> .env
             echo "AIDBOX_ZEN_DEV_MODE=disable" >> .env
             echo "CERTBOT_EMAIL=$CERTBOT_EMAIL" >> .env
             docker compose --profile production pull -q
