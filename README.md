@@ -47,3 +47,8 @@ In this case please run just the app:
 docker compose up --profile smart-app up smart-app
 ```
 And adjust [FHIRServerUrl](https://github.com/beda-software/au-core-aidbox/blob/main/smart/src/main.tsx#L8)https://github.com/beda-software/au-core-aidbox/blob/main/smart/src/main.tsx#L8 variable value.
+
+## Run notebooks via cloud
+|Name|Source Reference|Notebook|
+|----|----------------|--------|
+|Read & Search Test Scenarios|https://confluence.hl7.org/pages/viewpage.action?pageId=203358353|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FRead+%26+Search+Test+Scenarios.ipynb)|
