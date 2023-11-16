@@ -64,3 +64,10 @@ services:
         smart-app-deps:
           condition: service_completed_successfully
       profiles: ["smart-app"]
+    client:
+      build: ./client
+      ports:
+      - "8888:8888"
+      volumes:
+      - ./client:/app
+      profiles: ["client"]
