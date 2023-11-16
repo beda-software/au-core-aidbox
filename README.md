@@ -11,19 +11,39 @@ Password: `password`
 
 
 ## Local environment
-To run it locally you will need a license that you can get here [aidbox.app](https://aidbox.app/ui/portal#/signin)   
+The only dependency that is needed is docker. If docker is not already installed on your system, you can download and install it from the [official docker website](https://docs.docker.com/get-docker/)
+
+To run Aidbox FHIR server locally you will need a license that you can get here [aidbox.app](https://aidbox.app/ui/portal#/signin)   
 Then add a `.env` file that contains the store license key in the `AIDBOX_LICENSE` variable.   
 
-Run aidbox with docker: `docker compose up`   
+Run aidbox with docker: 
+```
+docker compose up
+```   
 
-If docker is not already installed on your system, you can download and install it from the official docker [website](https://docs.docker.com/get-docker/)
+## Jupyter client
+You can run Jupyter notebook that implements test connectathon scenarios.
+To run it along with local Aidbox FHIR server use:
+```
+docker compose --profile client up
+```
+If you would like to run the notebook only and test it with FHIR server deployed in the cloud please use this command
+```
+docker compose up --profile client up client
+```
 
 ## SMART launch track
-For the smart launch track I have prepared a simple SMART on FHIR app that just loads a list of patients.
-The source code is available in [smart](https://github.com/beda-software/au-core-aidbox/tree/main/) folder of this repository.
+For the smart launch track, I have prepared a simple SMART on the FHIR app that just loads a list of patients.
+The source code is available in the [smart](https://github.com/beda-software/au-core-aidbox/tree/main/) folder of this repository.
 You can launch it locally with npm, or use smart-app docker compose profile
 ```
 docker compose --profile smart-app up
 ```
 The app launches in dev mode so any changes in the source code will be represented in the browser.
-If you are a Windows user, you should  add `HOST_OS=Windows` into .env file. It enable file polling that is required for code reload in Windoes.
+If you are a Windows user, you should  add `HOST_OS=Windows` into .env file. It enables file polling that is required for code reload in Windows.
+You can run just the SMART on FHIR app and configure it to work with cloud version of aidbox FHIR server.  
+In this case please run just the app:
+```
+docker compose up --profile smart-app up smart-app
+```
+And adjust [FHIRServerUrl](https://github.com/beda-software/au-core-aidbox/blob/main/smart/src/main.tsx#L8)https://github.com/beda-software/au-core-aidbox/blob/main/smart/src/main.tsx#L8 variable value.
