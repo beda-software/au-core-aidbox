@@ -11,7 +11,13 @@
   :zen/desc "AU Core"
   :services {:public-access public-access
              :allow-rpc allow-rpc
-             :smart-app smart-app}}
+             :smart-app smart-app
+             :seed seed}}
+
+ seed
+ {:zen/tags  #{aidbox/service}
+  :engine    aidbox/seed
+  :files ["seeds.ndjson.gz"]}
 
  public-access
  {:zen/tags #{aidbox/service}
