@@ -1,0 +1,4 @@
+fhirpy==1.4.2
+jupyter==1.0.0
+fhirpathpy==0.2.2
+funcy==2.0
