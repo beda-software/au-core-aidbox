@@ -1,6 +1,6 @@
 services:
     aidbox:
-        image: healthsamurai/aidboxone:stable
+        image: healthsamurai/aidboxone:edge
         depends_on:
             - aidbox-db
         links:
