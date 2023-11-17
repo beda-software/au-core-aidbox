@@ -1,5 +1,5 @@
 body.login-page .form-group:nth-of-type(1)::after {
-    content: "You can use admin as login";
+    content: "Use: admin";
     display: block;
     margin-top: 4px;
     color: grey;
@@ -7,7 +7,7 @@ body.login-page .form-group:nth-of-type(1)::after {
 }
 
 body.login-page .form-group:nth-of-type(2)::after {
-    content: "You can use password as password";
+    content: "Use: password";
     display: block;
     margin-top: 4px;
     color: grey;
