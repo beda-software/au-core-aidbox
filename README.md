@@ -22,8 +22,9 @@ docker compose up
 ```   
 
 ## Jupyter client
-You can run Jupyter notebook that implements test connectathon scenarios.
-To run it along with local Aidbox FHIR server use:
+You can run Jupyter Notebook that implements test connectathon scenarios.
+### Run locally
+To run it along with the local Aidbox FHIR server use:
 ```
 docker compose --profile client up
 ```
@@ -31,6 +32,11 @@ If you would like to run the notebook only and test it with FHIR server deployed
 ```
 docker compose up --profile client up client
 ```
+### Run in the cloud via mybinder.org
+|Scenario|Run link|
+|----|--------|
+|[Read & Search Test Scenarios](https://confluence.hl7.org/pages/viewpage.action?pageId=203358353)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FRead+%26+Search+Test+Scenarios.ipynb)|
+|[Validate & Create Test Scenarios](https://confluence.hl7.org/pages/viewpage.action?pageId=204276132)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FValidate+%26+Create+Test+Scenarios.ipynb)|
 
 ## SMART launch track
 For the smart launch track, I have prepared a simple SMART on the FHIR app that just loads a list of patients.
@@ -48,8 +54,3 @@ docker compose up --profile smart-app up smart-app
 ```
 And adjust [FHIRServerUrl](https://github.com/beda-software/au-core-aidbox/blob/main/smart/src/main.tsx#L8)https://github.com/beda-software/au-core-aidbox/blob/main/smart/src/main.tsx#L8 variable value.
 
-## Run notebooks via cloud
-|Name|Source Reference|Notebook|
-|----|----------------|--------|
-|Read & Search Test Scenarios|https://confluence.hl7.org/pages/viewpage.action?pageId=203358353|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FRead+%26+Search+Test+Scenarios.ipynb)|
-|Validate & Create Test Scenarios|https://confluence.hl7.org/pages/viewpage.action?pageId=204276132|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FValidate+%26+Create+Test+Scenarios.ipynb)|
