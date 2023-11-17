@@ -3,3 +3,6 @@ client/.ipynb_checkpoints
 .env
 letsencrypt
 smart/node_modules
+.DS_Store
+.clj-kondo/
+.lsp/
