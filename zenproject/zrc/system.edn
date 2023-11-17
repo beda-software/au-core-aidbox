@@ -12,7 +12,8 @@
   :services {:public-access public-access
              :allow-rpc allow-rpc
              :smart-app smart-app
-             :seed seed}}
+             :seed seed
+             :auth-config auth-config}}
 
  seed
  {:zen/tags  #{aidbox/service}
@@ -39,4 +40,11 @@
   {:Client
    {:smart-app {:auth {:authorization_code {:redirect_uri "http://localhost:5173/"}}
                 :grant_types [:authorization_code]
-                :smart {:launch_uri "http://localhost:5173/"}}}}}}
+                :smart {:launch_uri "http://localhost:5173/"}}}}}
+
+ auth-config
+ {:zen/tags #{aidbox/service}
+  :engine   aidbox/seed-v2
+  :resources
+  {:AuthConfig
+   {:app {:theme {:styleUrl "/assets/aidbox.css"}}}}}}
