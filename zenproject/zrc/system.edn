@@ -3,12 +3,78 @@
           aidbox.rest
           aidbox.search-parameter.v1
           aidbox.repository.v1
-          hl7-fhir-au-core
           zen.fhir}
+
+ features
+ {:zen/tags #{aidbox.config/features}
+  :validation {:mode "fhir-schema"}}
+
+ db-config
+ {:zen/tags #{aidbox.config/db}
+  :pool     {:connection-timeout  30000
+             :idle-timeout        1000
+             :minimum-idle        2
+             :maximum-pool-size   30
+             :connection-init-sql "SELECT 1"}
+
+  :database #env PGDATABASE
+  :host     #env PGHOST
+  :port     #env PGPORT
+  :user     #env PGUSER
+  :password #env PGPASSWORD}
+
+ web-config
+ {:zen/tags              #{aidbox.config/web}
+  :base-url              #env AIDBOX_BASE_URL
+  :port                  #env-integer AIDBOX_PORT
+  :thread                8
+  :max-body              10000000
+  :request-save-raw-body false}
+
+ search-config
+ {:zen/tags         #{aidbox.config/search}
+  :zen-fhir         :enable
+  :fhir-comparisons true
+  :default-params   {:timeout 30
+                     :total   "none"
+                     :count   100}
+  :chain            {:subselect true}}
+
+ compatibility-config
+ {:zen/tags   #{aidbox.config/compatibility}
+  :validation {:json-schema {:regex #{:fhir-datetime}}}
+  :auth       {:pkce {:code-challenge {:s256 {:conformant true}}}}}
+
+ auth
+ {:zen/tags       #{aidbox.config/auth}
+  :login-redirect "/ui/console"
+  :keys {:secret #env BOX_AUTH_KEYS_SECRET
+         :private #env BOX_AUTH_KEYS_PRIVATE
+         :public #env BOX_AUTH_KEYS_PUBLIC}}
+
+ base-config
+ {:zen/tags                #{aidbox.config/config}
+  ;; :web                     web-config
+  ;; :db                      db-config
+  ;; :search                  search-config
+  ;; :compatibility           compatibility-config
+  ;; :auth                    auth
+
+  :features                features
+  :fhir-packages           "hl7.fhir.au.core#0.2.2-preview"
+  :aidbox-license           #env AIDBOX_LICENSE
+  :fhir-version            "4.0.1"
+  :compliant-mode-enabled? true
+  :override-createdat-url  "http://fhir.aidbox.app/extension/createdat"
+  :correct-aidbox-format   true
+  :dev-mode                #env-boolean AIDBOX_DEV_MODE
+  :stdout-pretty           true
+  :disable-legacy-seed     true}
 
  box
  {:zen/tags #{aidbox/system}
   :zen/desc "AU Core"
+  :config   base-config
   :services {:public-access public-access
              :allow-rpc allow-rpc
              :smart-app smart-app
