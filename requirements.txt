@@ -1,4 +1,4 @@
 fhirpy==1.4.2
 jupyter==1.0.0
-fhirpathpy==0.2.2
+fhirpathpy @ git+https://github.com/beda-software/fhirpath-py.git@32623fcd0509e140d1e9fe0fb8e94c3d2ef092f3
 funcy==2.0
