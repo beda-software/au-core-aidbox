@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 fhirpy = "*"
 jupyter = "*"
-fhirpathpy = "*"
 funcy = "*"
+fhirpathpy = {ref = "issues-24", git = "git+https://github.com/beda-software/fhirpath-py.git"}
 
 [dev-packages]
 
