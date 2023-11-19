@@ -37,6 +37,7 @@ docker compose up --profile client up client
 |----|--------|
 |[Read & Search Test Scenarios](https://confluence.hl7.org/pages/viewpage.action?pageId=203358353)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FRead+%26+Search+Test+Scenarios.ipynb)|
 |[Validate & Create Test Scenarios](https://confluence.hl7.org/pages/viewpage.action?pageId=204276132)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FValidate+%26+Create+Test+Scenarios.ipynb)|
+|FHIRPath demo|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/beda-software/au-core-aidbox/main?labpath=client%2FFHIRPATH+demo+notebook.ipynb)|
 
 ## SMART launch track
 For the smart launch track, I have prepared a simple SMART on the FHIR app that just loads a list of patients.
