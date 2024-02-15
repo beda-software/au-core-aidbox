@@ -4,8 +4,6 @@ import gzip
 import json
 import ndjson
 
-import logging
-
 
 def load_resources_by_ids(abs_path, resource_type):
     resources = []
@@ -28,7 +26,6 @@ def load_resources(abs_path):
     for resource_type in os.listdir(abs_path):
         if not os.path.isdir(os.path.join(abs_path, resource_type)):
             continue
-        logging.error("{} {}".format(abs_path, resource_type))
         resources += load_resources_by_ids(abs_path, resource_type)
     return resources
 
