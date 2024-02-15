@@ -30,22 +30,21 @@ services:
             interval: 5s
             timeout: 30s
             retries: 100
-    nginx:
-      image: jonasal/nginx-certbot
-      ports:
-      - "80:80"
-      - "443:443"
-      volumes:
-      - ./nginx:/etc/nginx/user_conf.d:ro
-      - ./letsencrypt:/etc/letsencrypt
-      - ./assets:/www/assets:ro
-      environment:
-        CERTBOT_EMAIL: ${CERTBOT_EMAIL}
-      depends_on:
-        aidbox-healthcheck:
-          condition:
-            service_healthy
-      profiles: ["production"]
+    # nginx:
+    #   image: jonasal/nginx-certbot
+    #   ports:
+    #   - "80:80"
+    #   - "443:443"
+    #   volumes:
+    #   - ./nginx:/etc/nginx/user_conf.d:ro
+    #   - ./letsencrypt:/etc/letsencrypt
+    #   environment:
+    #     CERTBOT_EMAIL: ${CERTBOT_EMAIL}
+    #   depends_on:
+    #     aidbox-healthcheck:
+    #       condition:
+    #         service_healthy
+    #   profiles: ["production"]
     smart-app-deps:
       image: node:18
       command: bash -c "cd /app && npm install"
