@@ -1,0 +1,62 @@
+{
+    "meta": {
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"
+        ]
+    },
+    "specialty": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "394734003"
+                }
+            ]
+        }
+    ],
+    "name": "Large Private X-RAY",
+    "resourceType": "HealthcareService",
+    "id": "lge-priv-xray",
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "XX"
+                    }
+                ],
+                "text": "ABN"
+            },
+            "system": "http://hl7.org.au/id/abn",
+            "value": "51824997755"
+        }
+    ],
+    "serviceProvisionCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions",
+                    "code": "FBB",
+                    "display": "Fees and Bulk Billing"
+                }
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "1300 975 707",
+            "use": "work"
+        },
+        {
+            "system": "url",
+            "value": "https://lge-private-xray.example.com",
+            "use": "work"
+        }
+    ],
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: HealthcareService</b><a name=\"lge-priv-xray\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource HealthcareService &quot;lge-priv-xray&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-healthcareservice.html\">AU Core HealthcareService</a></p></div><p><b>identifier</b>: ABN:\u00a051824997755</p><p><b>specialty</b>: Radiological specialties <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#394734003)</span></p><p><b>name</b>: Large Private X-RAY</p><p><b>telecom</b>: ph: 1300 975 707(WORK), <a href=\"https://lge-private-xray.example.com\">https://lge-private-xray.example.com</a></p><p><b>serviceProvisionCode</b>: Fees and Bulk Billing <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-service-provision-conditions.html\">Service Provision Conditions Australian Concepts</a>#FBB)</span></p></div>"
+    }
+}

@@ -3,6 +3,7 @@ services:
         image: healthsamurai/aidboxone:stable
         depends_on:
             - aidbox-db
+            - build-seeds
         links:
             - 'aidbox-db:database'
         ports:

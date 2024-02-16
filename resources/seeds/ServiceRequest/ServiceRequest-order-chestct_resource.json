@@ -1,0 +1,90 @@
+{
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "708175003",
+                    "display": "Diagnostic imaging service"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "312251004",
+                    "display": "Computed tomography imaging - action"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-servicerequest",
+            "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest"
+        ]
+    },
+    "authoredOn": "2022-03-19T08:15:00+10:00",
+    "resourceType": "ServiceRequest",
+    "requester": {
+        "id": "bobrester-bob-gp",
+        "resourceType": "PractitionerRole"
+    },
+    "status": "active",
+    "id": "order-chestct",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "169069000",
+                "display": "CT of chest"
+            }
+        ],
+        "text": "Chest CT"
+    },
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PLAC",
+                        "display": "Placer Identifier"
+                    }
+                ],
+                "text": "Placer Order Identifier"
+            },
+            "system": "http://ns.electronichealth.net.au/id/hpio-scoped/order/1.0/8003621566684455",
+            "value": "3451451240",
+            "assigner": {
+                "display": "Bobregster Medical Center QLD"
+            }
+        }
+    ],
+    "bodySite": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "816094009",
+                    "display": "Structure of thoracic cross-sectional segment of trunk"
+                }
+            ]
+        }
+    ],
+    "intent": "order",
+    "subject": {
+        "id": "wang-li",
+        "resourceType": "Patient"
+    },
+    "performer": [
+        {
+            "display": "Large Private XRAY"
+        }
+    ],
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"order-chestct\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;order-chestct&quot; </p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-au-core-servicerequest.html\">AU Core ServiceRequest</a>, <a href=\"https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-diagnosticrequest.html\">AU Base Diagnostic Request</a></p></div><p><b>identifier</b>: Placer Order Identifier:\u00a03451451240</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: Diagnostic imaging service <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#708175003)</span>, Computed tomography imaging - action <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#312251004)</span></p><p><b>code</b>: Chest CT <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#169069000 &quot;CT of chest&quot;)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>authoredOn</b>: 2022-03-19 08:15:00+1000</p><p><b>requester</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>performer</b>: <span>: Large Private XRAY</span></p><p><b>bodySite</b>: Structure of thoracic cross-sectional segment of trunk <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#816094009)</span></p></div>"
+    }
+}

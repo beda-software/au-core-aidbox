@@ -1,0 +1,74 @@
+{
+    "description": "Mr. Li Wang's Advance Care Plan",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+                    "code": "100.16975",
+                    "display": "Advance Care Information"
+                }
+            ]
+        }
+    ],
+    "date": "2019-11-03T12:35:00+10:00",
+    "meta": {
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference"
+        ]
+    },
+    "docStatus": "final",
+    "content": [
+        {
+            "attachment": {
+                "contentType": "application/pdf",
+                "url": "acp_attachment.pdf",
+                "hash": "IiZNlyLY4gyewfICeWhFe2NcDDw="
+            }
+        }
+    ],
+    "type": {
+        "coding": [
+            {
+                "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+                "code": "100.16998",
+                "display": "Advance Care Planning Document"
+            }
+        ]
+    },
+    "resourceType": "DocumentReference",
+    "author": [
+        {
+            "id": "bobrester-bob-gp",
+            "resourceType": "PractitionerRole"
+        }
+    ],
+    "masterIdentifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:1421b2d5-7e43-4414-93c5-d1db160e5513"
+    },
+    "custodian": {
+        "id": "bobrester-medical-center",
+        "resourceType": "Organization"
+    },
+    "status": "current",
+    "id": "acp",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:1421b2d5-7e43-4414-93c5-d1db160e5513"
+        }
+    ],
+    "subject": {
+        "id": "wang-li",
+        "resourceType": "Patient"
+    },
+    "authenticator": {
+        "id": "bobrester-bob-gp",
+        "resourceType": "PractitionerRole"
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DocumentReference</b><a name=\"acp\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DocumentReference &quot;acp&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-documentreference.html\">AU Core DocumentReference</a></p></div><p><b>masterIdentifier</b>: id:\u00a0<a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\">#</a>urn:uuid:1421b2d5-7e43-4414-93c5-d1db160e5513</p><p><b>identifier</b>: id:\u00a0<a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\">#</a>urn:uuid:1421b2d5-7e43-4414-93c5-d1db160e5513</p><p><b>status</b>: current</p><p><b>docStatus</b>: final</p><p><b>type</b>: Advance Care Planning Document <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (nctis-data-components-1#100.16998)</span></p><p><b>category</b>: Advance Care Information <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (nctis-data-components-1#100.16975)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>date</b>: Nov 3, 2019, 2:35:00\u202fAM</p><p><b>author</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>authenticator</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>custodian</b>: <a href=\"Organization-bobrester-medical-center.html\">Organization/bobrester-medical-center</a> &quot;Bobrester Medical Center&quot;</p><p><b>description</b>: Mr. Li Wang's Advance Care Plan</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Hash</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><code>acp_attachment.pdf</code></td><td>(base64 data - 20 bytes)</td></tr></table></blockquote></div>"
+    }
+}

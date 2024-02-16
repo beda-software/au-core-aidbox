@@ -1,0 +1,47 @@
+{
+    "patient": {
+        "id": "baby-smith-john",
+        "resourceType": "Patient"
+    },
+    "protocolApplied": [
+        {
+            "targetDisease": [
+                {
+                    "text": "Hepatitis B"
+                }
+            ],
+            "doseNumber": {
+                "positiveInt": 1
+            }
+        }
+    ],
+    "meta": {
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"
+        ]
+    },
+    "vaccineCode": {
+        "coding": [
+            {
+                "system": "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats",
+                "code": "ENGP"
+            }
+        ],
+        "text": "Engerix-B (paediatric)"
+    },
+    "resourceType": "Immunization",
+    "primarySource": true,
+    "status": "completed",
+    "id": "hepb-1",
+    "location": {
+        "id": "au-hospital",
+        "resourceType": "Location"
+    },
+    "occurrence": {
+        "dateTime": "2023-01-24"
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b><a name=\"hepb-1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization &quot;hepb-1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-immunization.html\">AU Core Immunization</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: Engerix-B (paediatric) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (air-vaccine-code-formats#ENGP)</span></p><p><b>patient</b>: <a href=\"Patient-baby-smith-john.html\">Patient/baby-smith-john</a> &quot; SMITH&quot;</p><p><b>occurrence</b>: 2023-01-24</p><p><b>primarySource</b>: true</p><p><b>location</b>: <a href=\"Location-au-hospital.html\">Location/au-hospital</a> &quot;QLD Hospital&quot;</p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Hepatitis B <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></td><td>1</td></tr></table></div>"
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "onset": {
+        "Age": {
+            "value": 52,
+            "unit": "years",
+            "system": "http://unitsofmeasure.org",
+            "code": "a"
+        }
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "problem-list-item",
+                    "display": "Problem List Item"
+                }
+            ],
+            "text": "Problem"
+        }
+    ],
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active",
+                "display": "Active"
+            }
+        ],
+        "text": "Active"
+    },
+    "meta": {
+        "versionId": "5",
+        "lastUpdated": "2022-06-17T23:22:56.193+00:00",
+        "source": "#5R98DWXS6a48AGkD",
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"
+        ]
+    },
+    "evidence": [
+        {
+            "detail": [
+                {
+                    "display": "Father had Chronic Kidney disease",
+                    "id": "father",
+                    "resourceType": "FamilyMemberHistory"
+                },
+                {
+                    "display": "Patient receives regular dialysis",
+                    "id": "dialysis",
+                    "resourceType": "Procedure"
+                },
+                {
+                    "display": "BUN is 24 mg/dL",
+                    "id": "bun-mcc",
+                    "resourceType": "Observation"
+                }
+            ]
+        }
+    ],
+    "resourceType": "Condition",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal",
+            "value": {
+                "Reference": {
+                    "id": "hpt-wnl",
+                    "resourceType": "Goal"
+                }
+            }
+        }
+    ],
+    "recordedDate": "2018-12-01",
+    "id": "ckd",
+    "severity": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "24484000",
+                "display": "Severe"
+            }
+        ]
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "700379002",
+                "display": "Chronic kidney disease stage 3B (disorder)"
+            }
+        ]
+    },
+    "verificationStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                "code": "confirmed"
+            }
+        ]
+    },
+    "subject": {
+        "id": "dan-harry",
+        "resourceType": "Patient"
+    },
+    "text": {
+        "status": "extensions",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"ckd\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;ckd&quot; Version &quot;5&quot; Updated &quot;2022-06-17 23:22:56+0000&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #5R98DWXS6a48AGkD!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-condition.html\">AU Core Condition</a></p></div><p><b>pertains to goal</b>: <a href=\"Goal-hpt-wnl.html\">Goal/hpt-wnl</a></p><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#problem-list-item &quot;Problem List Item&quot;)</span></p><p><b>severity</b>: Severe <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#24484000)</span></p><p><b>code</b>: Chronic kidney disease stage 3B (disorder) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#700379002)</span></p><p><b>subject</b>: <a href=\"Patient-dan-harry.html\">Patient/dan-harry</a> &quot; DAN&quot;</p><p><b>onset</b>: 52 years<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code a = 'a')</span></p><p><b>recordedDate</b>: 2018-12-01</p><h3>Evidences</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"FamilyMemberHistory-father.html\">FamilyMemberHistory/father: Father had Chronic Kidney disease</a>, <a href=\"Procedure-dialysis.html\">Procedure/dialysis: Patient receives regular dialysis</a>, <a href=\"Observation-bun-mcc.html\">Observation/bun-mcc: BUN is 24 mg/dL</a></td></tr></table></div>"
+    }
+}

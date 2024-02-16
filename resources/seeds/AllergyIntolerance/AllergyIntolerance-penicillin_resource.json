@@ -1,0 +1,81 @@
+{
+    "patient": {
+        "id": "dan-harry",
+        "resourceType": "Patient"
+    },
+    "category": [
+        "medication"
+    ],
+    "criticality": "high",
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                "code": "active",
+                "display": "Active"
+            }
+        ]
+    },
+    "meta": {
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"
+        ]
+    },
+    "resourceType": "AllergyIntolerance",
+    "asserter": {
+        "id": "dan-harry",
+        "resourceType": "Patient"
+    },
+    "recordedDate": "1999-08-25",
+    "id": "penicillin",
+    "recorder": {
+        "id": "bobrester-bob-gp",
+        "resourceType": "PractitionerRole"
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "764146007",
+                "display": "Penicillin"
+            }
+        ]
+    },
+    "verificationStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                "code": "unconfirmed",
+                "display": "Unconfirmed"
+            }
+        ]
+    },
+    "reaction": [
+        {
+            "substance": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "764146007",
+                        "display": "Penicillin"
+                    }
+                ]
+            },
+            "manifestation": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "247472004",
+                            "display": "Hives"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: AllergyIntolerance</b><a name=\"penicillin\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource AllergyIntolerance &quot;penicillin&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-allergyintolerance.html\">AU Core AllergyIntolerance</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-allergyintolerance-clinical.html\">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Unconfirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-allergyintolerance-verification.html\">AllergyIntolerance Verification Status</a>#unconfirmed)</span></p><p><b>category</b>: medication</p><p><b>criticality</b>: high</p><p><b>code</b>: Penicillin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#764146007)</span></p><p><b>patient</b>: <a href=\"Patient-dan-harry.html\">Patient/dan-harry</a> &quot; DAN&quot;</p><p><b>recordedDate</b>: 1999-08-25</p><p><b>recorder</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>asserter</b>: <a href=\"Patient-dan-harry.html\">Patient/dan-harry</a> &quot; DAN&quot;</p><h3>Reactions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Substance</b></td><td><b>Manifestation</b></td></tr><tr><td style=\"display: none\">*</td><td>Penicillin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#764146007)</span></td><td>Hives <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#247472004)</span></td></tr></table></div>"
+    }
+}

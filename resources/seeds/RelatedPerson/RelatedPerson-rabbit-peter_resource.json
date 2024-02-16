@@ -1,0 +1,57 @@
+{
+    "resourceType": "RelatedPerson",
+    "id": "rabbit-peter",
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"rabbit-peter\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;rabbit-peter&quot; </p></div><p><b>patient</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>relationship</b>: unrelated friend <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#FRND; <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v2-0131.html\">contactRole2</a>#C &quot;Emergency Contact&quot;)</span></p><p><b>name</b>: Peter Rabbit Rabbit </p><p><b>telecom</b>: ph: 07 853 9191(HOME)</p><p><b>address</b>: 29 Gadsby Street Blacktown NSW 2148 AU (HOME)</p></div>"
+    },
+    "patient": {
+        "id": "wang-li",
+        "resourceType": "Patient"
+    },
+    "relationship": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code": "FRND",
+                    "display": "unrelated friend"
+                },
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "C",
+                    "display": "Emergency Contact"
+                }
+            ]
+        }
+    ],
+    "name": [
+        {
+            "use": "usual",
+            "family": "Rabbit",
+            "given": [
+                "Peter",
+                "Rabbit"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "07 853 9191",
+            "use": "home"
+        }
+    ],
+    "address": [
+        {
+            "use": "home",
+            "line": [
+                "29 Gadsby Street"
+            ],
+            "city": "Blacktown",
+            "state": "NSW",
+            "postalCode": "2148",
+            "country": "AU"
+        }
+    ]
+}
