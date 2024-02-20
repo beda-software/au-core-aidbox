@@ -1,4 +1,8 @@
 {
+    "encounter": {
+        "id": "annualvisit-3",
+        "resourceType": "Encounter"
+    },
     "category": [
         {
             "coding": [

@@ -46,5 +46,9 @@
             "id": "headcircum-1",
             "resourceType": "Observation"
         }
-    ]
+    ],
+    "encounter": {
+        "id": "annualvisit-3",
+        "resourceType": "Encounter"
+    }
 }

@@ -1,4 +1,14 @@
 {
+    "performer": [
+        {
+            "id": "bobrester-bob-gp",
+            "resourceType": "PractitionerRole"
+        }
+    ],
+    "encounter": {
+        "id": "annualvisit-1",
+        "resourceType": "Encounter"
+    },
     "category": [
         {
             "coding": [

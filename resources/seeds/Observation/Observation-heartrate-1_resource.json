@@ -18,7 +18,8 @@
         ]
     },
     "encounter": {
-        "display": "GP Visit"
+        "id": "nailwound",
+        "resourceType": "Encounter"
     },
     "value": {
         "Quantity": {
