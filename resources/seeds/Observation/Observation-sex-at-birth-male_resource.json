@@ -53,5 +53,11 @@
     "text": {
         "status": "generated",
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"sex-at-birth-male\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;sex-at-birth-male&quot; </p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-au-core-sexassignedatbirth.html\">AU Core Biological Sex Assigned at Birth</a>, <a href=\"StructureDefinition-au-core-observation.html\">AU Core Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: Sex assigned at birth <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1515311000168102; <a href=\"https://loinc.org/\">LOINC</a>#76689-9)</span></p><p><b>subject</b>: <a href=\"Patient-baby-smith-john.html\">Patient/baby-smith-john</a> &quot; SMITH&quot;</p><p><b>effective</b>: 2022-09-14</p><p><b>value</b>: Male <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#248153007)</span></p></div>"
-    }
+    },
+    "performer": [
+        {
+            "id": "bobrester-bob-gp",
+            "resourceType": "PractitionerRole"
+        }
+    ]
 }
