@@ -1,4 +1,97 @@
 {
+    "hasMember": [
+        {
+            "id": "bonedensity-simple-contained",
+            "resourceType": "Observation"
+        }
+    ],
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "80953-3",
+                        "display": "DXA Femur - right [Mass/Area] Bone density"
+                    }
+                ],
+                "text": "Femoral Neck Bone Density"
+            },
+            "valueQuantity": {
+                "value": 0.9,
+                "unit": "g/cm²",
+                "system": "http://unitsofmeasure.org",
+                "code": "G/CM2"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "38263-0",
+                        "display": "DXA Femur [T-score] Bone density"
+                    }
+                ],
+                "text": "Total Femur Bone Density"
+            },
+            "valueQuantity": {
+                "value": 1.0,
+                "unit": "g/cm²",
+                "system": "http://unitsofmeasure.org",
+                "code": "G/CM2"
+            }
+        }
+    ],
+    "referenceRange": [
+        {
+            "low": {
+                "value": 0.8,
+                "unit": "g/cm²",
+                "system": "http://unitsofmeasure.org",
+                "code": "G/CM2"
+            },
+            "high": {
+                "value": 1.2,
+                "unit": "g/cm²",
+                "system": "http://unitsofmeasure.org",
+                "code": "G/CM2"
+            },
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                        "code": "normal",
+                        "display": "Normal Range"
+                    }
+                ],
+                "text": "Normal Bone Density Range"
+            },
+            "text": "Normal femur bone density is between 0.8 and 1.2 g/cm²"
+        }
+    ],
+    "note": [
+        {
+            "text": "bonedensity-simple-precon"
+        }
+    ],
+    "interpretation": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                    "code": "H",
+                    "display": "High"
+                }
+            ]
+        }
+    ],
+    "identifier": [
+        {
+            "use": "official",
+            "value": "obsPrecon"
+        }
+    ],
     "category": [
         {
             "coding": [
