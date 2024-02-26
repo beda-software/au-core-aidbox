@@ -1,4 +1,15 @@
 {
+    "communication": [
+        {
+            "coding": [
+                {
+                    "system": "urn:ietf:bcp:47",
+                    "code": "yub"
+                }
+            ],
+            "text": "Yugambal"
+        }
+    ],
     "resourceType": "Practitioner",
     "id": "bobrester-bob",
     "meta": {
@@ -87,7 +98,8 @@
                 "start": "1996-02-08"
             },
             "issuer": {
-                "display": "Australian Health Practitioner Regulation Agency"
+                "id": "aaaaaia-insurer",
+                "resourceType": "Organization"
             },
             "ahpraProfession-details": {
                 "ahpraProfession": {

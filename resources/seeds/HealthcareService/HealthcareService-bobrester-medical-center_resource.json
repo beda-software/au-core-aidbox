@@ -73,6 +73,18 @@
             "resourceType": "Location"
         }
     ],
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/service-category",
+                    "code": "gp",
+                    "display": "General Practice"
+                }
+            ],
+            "text": "General Practice"
+        }
+    ],
     "text": {
         "status": "generated",
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: HealthcareService</b><a name=\"bobrester-medical-center\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource HealthcareService &quot;bobrester-medical-center&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-healthcareservice.html\">AU Core HealthcareService</a></p></div><p><b>identifier</b>: HPI-O:\u00a08003621566684455</p><p><b>providedBy</b>: <a href=\"Organization-bobrester-medical-center.html\">Organization/bobrester-medical-center</a> &quot;Bobrester Medical Center&quot;</p><p><b>type</b>: General practice service <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#788007007)</span>, COVID-19 vaccination service <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1575161000168105)</span>, Immunisation service <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1238911000168108)</span></p><p><b>location</b>: <a href=\"Location-bobrester-medical-center.html\">Location/bobrester-medical-center</a> &quot;Tindal Building&quot;</p><p><b>name</b>: Bobrester Medical Centre</p><p><b>telecom</b>: <a href=\"mailto:info@bobrestermedical.example.com\">info@bobrestermedical.example.com</a>, ph: (07) 5550 2427(WORK)</p></div>"
