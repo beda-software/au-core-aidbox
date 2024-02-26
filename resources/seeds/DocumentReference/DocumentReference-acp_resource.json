@@ -25,7 +25,6 @@
         {
             "format": {
                 "code": "application/pdf",
-                "system": "urn:ietf:bcp:13",
                 "display": "application/pdf"
             },
             "attachment": {
