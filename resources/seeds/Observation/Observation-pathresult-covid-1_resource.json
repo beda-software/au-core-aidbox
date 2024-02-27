@@ -1,4 +1,38 @@
 {
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "94558-4",
+                        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory system specimen by Rapid immunoassay"
+                    }
+                ],
+                "text": "RdRp gene detection"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "260373001",
+                        "display": "Detected"
+                    }
+                ]
+            }
+        }
+    ],
+    "referenceRange": [
+        {
+            "text": "0-1 Normal range"
+        }
+    ],
+    "hasMember": [
+        {
+            "id": "bloodpressure-2",
+            "resourceType": "Observation"
+        }
+    ],
     "category": [
         {
             "coding": [
