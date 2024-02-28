@@ -29,7 +29,7 @@
     ],
     "hasMember": [
         {
-            "id": "bloodpressure-2",
+            "id": "pathresult-covid-1",
             "resourceType": "Observation"
         }
     ],
@@ -134,6 +134,10 @@
     "performer": [
         {
             "display": "PATHOLOGY LAB"
+        },
+        {
+            "id": "bobrester-bob-gp",
+            "resourceType": "PractitionerRole"
         }
     ],
     "text": {
