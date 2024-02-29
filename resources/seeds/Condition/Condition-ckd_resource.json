@@ -41,11 +41,6 @@
         {
             "detail": [
                 {
-                    "display": "Father had Chronic Kidney disease",
-                    "id": "father",
-                    "resourceType": "FamilyMemberHistory"
-                },
-                {
                     "display": "Patient receives regular dialysis",
                     "id": "dialysis",
                     "resourceType": "Procedure"
