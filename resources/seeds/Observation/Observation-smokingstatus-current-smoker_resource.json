@@ -15,10 +15,7 @@
         "profile": [
             "http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus",
             "http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"
-        ],
-        "lastUpdated": "2024-02-16T09:50:15.656946Z",
-        "createdAt": "2024-02-16T08:35:02.199911Z",
-        "versionId": "172"
+        ]
     },
     "encounter": {
         "id": "nailwound",
@@ -84,7 +81,7 @@
         }
     ],
     "text": {
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"smokingstatus-current-smoker\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;smokingstatus-current-smoker&quot; </p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-au-core-smokingstatus.html\">AU Core Smoking Status</a>, <a href=\"StructureDefinition-au-core-observation.html\">AU Core Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Smoking status <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#266918002; <a href=\"https://loinc.org/\">LOINC</a>#72166-2)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>encounter</b>: <span>: GP Visit</span></p><p><b>effective</b>: 2016-07-02</p><p><b>performer</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>value</b>: Smoker <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#77176002 &quot;Current smoker&quot;; <a href=\"https://loinc.org/\">LOINC</a>#LA18979-7)</span></p></div>",
-        "status": "generated"
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"smokingstatus-current-smoker\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;smokingstatus-current-smoker&quot; </p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-au-core-smokingstatus.html\">AU Core Smoking Status</a>, <code>http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation</code></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Smoking status <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#266918002; <a href=\"https://loinc.org/\">LOINC</a>#72166-2)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>encounter</b>: <span>: GP Visit</span></p><p><b>effective</b>: 2016-07-02</p><p><b>performer</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>value</b>: Smoker <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#77176002 &quot;Current smoker&quot;; <a href=\"https://loinc.org/\">LOINC</a>#LA18979-7)</span></p></div>"
     }
 }

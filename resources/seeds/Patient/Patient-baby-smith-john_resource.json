@@ -40,6 +40,6 @@
     "gender": "male",
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Baby of Emma SMITH (TEMP)</b> male, DoB: 2022-09-14 ( Medical record number:\u00a07746677\u00a0(use:\u00a0TEMP))</p><hr/></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Baby of Emma SMITH (TEMP)</b> male, DoB: 2022-09-14 ( Medical record number/7746677\u00a0(use:\u00a0TEMP))</p><hr/></div>"
     }
 }

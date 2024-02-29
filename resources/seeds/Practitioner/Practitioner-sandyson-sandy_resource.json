@@ -8,7 +8,7 @@
     },
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"sandyson-sandy\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;sandyson-sandy&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-practitioner.html\">AU Core Practitioner</a></p></div><p><b>identifier</b>: Medicare Provider Number:\u00a01234562A, Prescriber Number:\u00a0553256</p><p><b>name</b>: Sandy Sandyson </p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"sandyson-sandy\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;sandyson-sandy&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-practitioner.html\">AU Core Practitioner</a></p></div><p><b>identifier</b>: Medicare Provider Number/1234562A, Prescriber Number/553256</p><p><b>name</b>: Sandy Sandyson </p></div>"
     },
     "identifier": [
         {

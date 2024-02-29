@@ -65,6 +65,6 @@
     "gender": "female",
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Sofia Italia </b> female, DoB: 1989-05-07 ( Passport Number:\u00a0<a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-passportNumNS-ITA.html\">#</a>IT1111111)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Id:</td><td colspan=\"3\">Medical Record Number:\u00a02338111</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">Piazza del Colosseo Rome Lazio 00184 ITA (HOME)</td></tr></table></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Sofia Italia </b> female, DoB: 1989-05-07 ( Passport Number/IT1111111)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Id:</td><td colspan=\"3\">Medical Record Number/2338111</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">Piazza del Colosseo Rome Lazio 00184 ITA (HOME)</td></tr></table></div>"
     }
 }
