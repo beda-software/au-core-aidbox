@@ -43,7 +43,7 @@
   "id": "tc-1.20",
   "target": [
     {
-      "id": "dva-au",
+      "id": "hospital-int",
       "resourceType": "Organization"
     }
   ]
