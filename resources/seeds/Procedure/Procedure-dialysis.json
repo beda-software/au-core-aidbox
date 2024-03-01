@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "versionId": "10",
+    "lastUpdated": "2022-08-02T18:25:27.353+00:00",
+    "source": "#a5RkjLxbIWy2ffIt",
+    "profile": [
+      "http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"
+    ]
+  },
+  "performed": {
+    "dateTime": "2012-08-05"
+  },
+  "resourceType": "Procedure",
+  "asserter": {
+    "display": "Dr Henry Levin",
+    "id": "levin-henry",
+    "resourceType": "Practitioner"
+  },
+  "status": "completed",
+  "id": "dialysis",
+  "recorder": {
+    "display": "Dr Henry Levin",
+    "id": "levin-henry",
+    "resourceType": "Practitioner"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "302497006",
+        "display": "Hemodialysis (procedure)"
+      }
+    ],
+    "text": "Hemodialysis"
+  },
+  "subject": {
+    "id": "dan-harry",
+    "resourceType": "Patient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "display": "Dr Henry Levin",
+        "id": "levin-henry",
+        "resourceType": "Practitioner"
+      }
+    }
+  ],
+  "reasonReference": [
+    {
+      "display": "Chronic Kidney Disease",
+      "id": "ckd",
+      "resourceType": "Condition"
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Procedure</b><a name=\"dialysis\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Procedure &quot;dialysis&quot; Version &quot;10&quot; Updated &quot;2022-08-02 18:25:27+0000&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #a5RkjLxbIWy2ffIt!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-procedure.html\">AU Core Procedure</a></p></div><p><b>status</b>: completed</p><p><b>code</b>: Hemodialysis <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#302497006 &quot;Hemodialysis (procedure)&quot;)</span></p><p><b>subject</b>: <a href=\"Patient-dan-harry.html\">Patient/dan-harry</a> &quot; DAN&quot;</p><p><b>performed</b>: 2012-08-05</p><p><b>recorder</b>: <a href=\"Practitioner-levin-henry.html\">Practitioner/levin-henry: Dr Henry Levin</a> &quot; LEVIN&quot;</p><p><b>asserter</b>: <a href=\"Practitioner-levin-henry.html\">Practitioner/levin-henry: Dr Henry Levin</a> &quot; LEVIN&quot;</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-levin-henry.html\">Practitioner/levin-henry: Dr Henry Levin</a> &quot; LEVIN&quot;</td></tr></table><p><b>reasonReference</b>: <a href=\"Condition-ckd.html\">Condition/ckd: Chronic Kidney Disease</a></p></div>"
+  }
+}
