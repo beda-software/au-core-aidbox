@@ -134,6 +134,10 @@
   "performer": [
     {
       "display": "PATHOLOGY LAB"
+    },
+    {
+      "id": "bobrester-bob-gp",
+      "resourceType": "PractitionerRole"
     }
   ],
   "text": {
