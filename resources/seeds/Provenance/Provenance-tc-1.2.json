@@ -17,6 +17,10 @@
       "who": {
         "id": "bobrester-bob-gp",
         "resourceType": "PractitionerRole"
+      },
+      "onBehalfOf": {
+        "id": "bobrester-medical-center",
+        "resourceType": "Organization"
       }
     }
   ],
