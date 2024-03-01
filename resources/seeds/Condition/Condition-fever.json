@@ -1,0 +1,105 @@
+{
+  "onset": {
+    "dateTime": "2015-02-11"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "55607006",
+          "display": "Problem"
+        },
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "resolved",
+        "display": "Resolved"
+      }
+    ]
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"
+    ]
+  },
+  "evidence": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "258710007",
+              "display": "degrees C"
+            }
+          ]
+        }
+      ],
+      "detail": [
+        {
+          "display": "Temperature",
+          "id": "bodytemp-fever",
+          "resourceType": "Observation"
+        }
+      ]
+    }
+  ],
+  "abatement": {
+    "dateTime": "2015-02-14"
+  },
+  "resourceType": "Condition",
+  "asserter": {
+    "id": "sandyson-sandy-nurse",
+    "resourceType": "PractitionerRole"
+  },
+  "recordedDate": "2015-02-12",
+  "id": "fever",
+  "recorder": {
+    "id": "sandyson-sandy-nurse",
+    "resourceType": "PractitionerRole"
+  },
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "6736007",
+        "display": "Moderate severity"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "386661006",
+        "display": "Fever"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed",
+        "display": "Confirmed"
+      }
+    ]
+  },
+  "subject": {
+    "id": "wang-li",
+    "resourceType": "Patient"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"fever\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;fever&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-condition.html\">AU Core Condition</a></p></div><p><b>clinicalStatus</b>: Resolved <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#resolved)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#55607006; <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#problem-list-item)</span></p><p><b>severity</b>: Moderate severity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#6736007)</span></p><p><b>code</b>: Fever <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#386661006)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>onset</b>: 2015-02-11</p><p><b>abatement</b>: 2015-02-14</p><p><b>recordedDate</b>: 2015-02-12</p><p><b>recorder</b>: <a href=\"PractitionerRole-sandyson-sandy-nurse.html\">PractitionerRole/sandyson-sandy-nurse</a></p><p><b>asserter</b>: <a href=\"PractitionerRole-sandyson-sandy-nurse.html\">PractitionerRole/sandyson-sandy-nurse</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td>degrees C <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#258710007)</span></td><td><a href=\"Observation-bodytemp-fever.html\">Observation/bodytemp-fever: Temperature</a></td></tr></table></div>"
+  }
+}

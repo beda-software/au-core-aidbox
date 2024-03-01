@@ -1,0 +1,77 @@
+{
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "36969009",
+        "display": "Placement of stent in coronary artery"
+      }
+    ]
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"
+    ]
+  },
+  "focalDevice": [
+    {
+      "action": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "425362007",
+            "display": "Surgical insertion - action"
+          }
+        ]
+      },
+      "manipulated": {
+        "display": "coronary stent"
+      }
+    }
+  ],
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "876856005",
+          "display": "Stenosis of right coronary artery"
+        }
+      ],
+      "text": "Occlusion of right coronary artery"
+    }
+  ],
+  "performed": {
+    "dateTime": "2021-09-25"
+  },
+  "resourceType": "Procedure",
+  "status": "completed",
+  "id": "stentinsertion",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "387713003"
+      }
+    ]
+  },
+  "location": {
+    "id": "au-hospital",
+    "resourceType": "Location"
+  },
+  "subject": {
+    "id": "wang-li",
+    "resourceType": "Patient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "display": "Dr. David Surgeon"
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Procedure</b><a name=\"stentinsertion\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Procedure &quot;stentinsertion&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-procedure.html\">AU Core Procedure</a></p></div><p><b>status</b>: completed</p><p><b>category</b>: Placement of stent in coronary artery <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#36969009)</span></p><p><b>code</b>: Surgical procedure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#387713003)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>performed</b>: 2021-09-25</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span>: Dr. David Surgeon</span></td></tr></table><p><b>location</b>: <a href=\"Location-au-hospital.html\">Location/au-hospital</a> &quot;QLD Hospital&quot;</p><p><b>reasonCode</b>: Occlusion of right coronary artery <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#876856005 &quot;Stenosis of right coronary artery&quot;)</span></p><h3>FocalDevices</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Action</b></td><td><b>Manipulated</b></td></tr><tr><td style=\"display: none\">*</td><td>Surgical insertion - action <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#425362007)</span></td><td><span>: coronary stent</span></td></tr></table></div>"
+  }
+}
