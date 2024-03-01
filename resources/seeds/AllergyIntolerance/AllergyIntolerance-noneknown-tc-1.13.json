@@ -53,7 +53,8 @@
     ]
   },
   "encounter": {
-    "display": "GP Visit"
+    "id": "nailwound",
+    "resourceType": "Encounter"
   },
   "resourceType": "AllergyIntolerance",
   "asserter": {
