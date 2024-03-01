@@ -33,7 +33,7 @@
         "text": "Medicare Provider Number"
       },
       "system": "http://ns.electronichealth.net.au/id/medicare-provider-number",
-      "value": "1234561A"
+      "value": "bob-tc-1.21"
     },
     {
       "type": {
@@ -47,7 +47,7 @@
         "text": "Prescriber Number"
       },
       "system": "http://ns.electronichealth.net.au/id/medicare-prescriber-number",
-      "value": "553255"
+      "value": "bob-tc-1.21"
     }
   ],
   "name": [
