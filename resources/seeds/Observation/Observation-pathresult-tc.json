@@ -62,7 +62,7 @@
     ],
     "hasMember": [
         {
-            "id": "bodyweight-tc",
+            "id": "pathresult-tc",
             "resourceType": "Observation"
         }
     ],
@@ -90,7 +90,7 @@
         ]
     },
     "specimen": {
-        "id": "nasoswab",
+        "id": "specimen-tc",
         "resourceType": "Specimen"
     },
     "value": {
