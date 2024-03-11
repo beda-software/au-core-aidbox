@@ -90,7 +90,7 @@
         ]
     },
     "specimen": {
-        "id": "nasoswab",
+        "id": "specimen-tc",
         "resourceType": "Specimen"
     },
     "value": {
