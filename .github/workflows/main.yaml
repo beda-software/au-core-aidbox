@@ -1,0 +1,33 @@
+name: Deploy Aidbox with AU Core profile
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate .env and restart
+        uses: appleboy/ssh-action@v0.1.7
+        env:
+          AIDBOX_LICENSE: ${{secrets.AIDBOX_LICENSE}}
+          CERTBOT_EMAIL: ${{secrets.CERTBOT_EMAIL}}
+        with:
+          host: ${{secrets.REMOTE_HOST}}
+          username: ${{secrets.REMOTE_USER}}
+          key: ${{secrets.PRIVATE_KEY}}
+          envs: >
+            AIDBOX_LICENSE,CERTBOT_EMAIL
+          script_stop: true
+          script: |
+            cd ~/au-core-aidbox
+            git pull
+            echo "AIDBOX_LICENSE=$AIDBOX_LICENSE" > .env
+            echo "BOX_FEATURES_FTR_PULL_ENABLE=true" >> .env
+            echo "AIDBOX_BASE_URL=https://au-core.beda.software" >> .env
+            echo "AIDBOX_ZEN_DEV_MODE=disable" >> .env
+            echo "CERTBOT_EMAIL=$CERTBOT_EMAIL" >> .env
+            docker compose --profile production pull -q
+            docker compose --profile production stop
+            docker compose --profile production up -d
