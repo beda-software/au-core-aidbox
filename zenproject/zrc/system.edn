@@ -84,7 +84,7 @@
  seed
  {:zen/tags  #{aidbox/service}
   :engine    aidbox/seed
-  :files ["seeds.ndjson.gz"]}
+  :files ["seeds-data.ndjson.gz"]}
 
  public-access
  {:zen/tags #{aidbox/service}
