@@ -3,6 +3,7 @@ services:
         image: healthsamurai/aidboxone:stable
         depends_on:
             - aidbox-db
+            - build-seeds
         links:
             - 'aidbox-db:database'
         ports:
@@ -30,6 +31,13 @@ services:
             interval: 5s
             timeout: 30s
             retries: 100
+    build-seeds:
+        build:
+            context: .
+            dockerfile: Dockerfile.seeds
+        volumes:
+            - ./zenproject:/app/zenproject
+            - ./resources/seeds:/app/resources/seeds
     nginx:
       image: jonasal/nginx-certbot
       ports:
