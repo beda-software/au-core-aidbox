@@ -61,7 +61,7 @@
   ;; :auth                    auth
 
   :features                features
-  :fhir-packages           "hl7.fhir.au.core#0.2.2-preview"
+  :fhir-packages           "hl7.fhir.au.core#0.3.0-ballot"
   :aidbox-license           #env AIDBOX_LICENSE
   :fhir-version            "4.0.1"
   :compliant-mode-enabled? true
