@@ -1,0 +1,10 @@
+{ns main
+ import #{aidbox
+          config}
+ 
+ box
+ {:zen/tags #{aidbox/system}
+  :config   config/base-config
+  :services {:admin-user-seed config/admin-user-seed
+             :root-client-seed config/root-client-seed
+             :demo-data-seeds config/demo-data-seed}}}

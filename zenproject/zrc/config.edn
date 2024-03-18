@@ -1,13 +1,7 @@
-{ns system
+{ns     config
  import #{aidbox
-          aidbox.rest
-          aidbox.search-parameter.v1
-          aidbox.repository.v1
-          zen.fhir}
-
- features
- {:zen/tags #{aidbox.config/features}
-  :validation {:mode "fhir-schema"}}
+          aidbox.config
+          hl7-fhir-r4-core}
 
  db-config
  {:zen/tags #{aidbox.config/db}
@@ -52,18 +46,28 @@
          :private #env BOX_AUTH_KEYS_PRIVATE
          :public #env BOX_AUTH_KEYS_PUBLIC}}
 
+ metrics
+ {:zen/tags #{aidbox.config/metrics}
+  :port #env BOX_METRICS_PORT}
+
+ features
+ {:zen/tags #{aidbox.config/features}
+  :validation {:mode "fhir-schema"}}
+
  base-config
  {:zen/tags                #{aidbox.config/config}
-  ;; :web                     web-config
-  ;; :db                      db-config
-  ;; :search                  search-config
-  ;; :compatibility           compatibility-config
-  ;; :auth                    auth
+  :web                     web-config
+  :db                      db-config
+  :search                  search-config
+  :compatibility           compatibility-config
+  :auth                    auth
+  :metrics                 metrics
 
+  :aidbox-license #env AIDBOX_LICENSE
+
+  :fhir-version            "4.0.1"
   :features                features
   :fhir-packages           "hl7.fhir.au.core#0.3.0-ballot"
-  :aidbox-license           #env AIDBOX_LICENSE
-  :fhir-version            "4.0.1"
   :compliant-mode-enabled? true
   :override-createdat-url  "http://fhir.aidbox.app/extension/createdat"
   :correct-aidbox-format   true
@@ -71,46 +75,31 @@
   :stdout-pretty           true
   :disable-legacy-seed     true}
 
- box
- {:zen/tags #{aidbox/system}
-  :zen/desc "AU Core"
-  :config   base-config
-  :services {:public-access public-access
-             :allow-rpc allow-rpc
-             :smart-app smart-app
-             :seed seed
-             :auth-config auth-config}}
+ admin-user-seed
+ {:zen/tags #{aidbox/service}
+  :engine   aidbox/seed-v2
+  :resources
+  {:User {:admin
+          {:password #env AIDBOX_ADMIN_PASSWORD}}
 
- seed
+   :AccessPolicy {:allow-admin-user
+                  {:engine "allow"
+                   :link   [{:resourceType "User" :id "admin"}]}}}}
+ root-client-seed
+ {:zen/tags #{aidbox/service}
+  :engine   aidbox/seed-v2
+  :resources
+  {:Client {:root
+            {:name        "Root client"
+             :secret      #env AIDBOX_CLIENT_SECRET
+             :first_party true
+             :grant_types ["basic"]}}
+
+   :AccessPolicy {:allow-root-client
+                  {:engine "allow"
+                   :link   [{:resourceType "Client" :id "root"}]}}}}
+ demo-data-seed
  {:zen/tags  #{aidbox/service}
   :engine    aidbox/seed
-  :files ["seeds-data.ndjson.gz"]}
+  :files ["seeds-data.ndjson.gz"]}}
 
- public-access
- {:zen/tags #{aidbox/service}
-  :engine   aidbox/seed-v2
-  :resources
-  {:AccessPolicy {:allow-any-user {:engine "allow"}}}}
-
- allow-rpc
- {:zen/tags #{aidbox/service}
-  :engine   aidbox/seed-v2
-  :resources
-  {:AccessPolicy {:allow-rpc {:engine "json-schema"
-                              :schema {:uri {:constant "/rpc"}}}}}}
-
- smart-app
- {:zen/tags #{aidbox/service}
-  :engine   aidbox/seed-v2
-  :resources
-  {:Client
-   {:smart-app {:auth {:authorization_code {:redirect_uri "http://localhost:5173/"}}
-                :grant_types [:authorization_code]
-                :smart {:launch_uri "http://localhost:5173/"}}}}}
-
- auth-config
- {:zen/tags #{aidbox/service}
-  :engine   aidbox/seed-v2
-  :resources
-  {:AuthConfig
-   {:app {:theme {:styleUrl "/assets/aidbox.css"}}}}}}
