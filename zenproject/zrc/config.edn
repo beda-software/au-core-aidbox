@@ -101,5 +101,11 @@
  demo-data-seed
  {:zen/tags  #{aidbox/service}
   :engine    aidbox/seed
-  :files ["seeds-data.ndjson.gz"]}}
+  :files ["seeds-data.ndjson.gz"]}
+
+ public-access
+ {:zen/tags #{aidbox/service}
+  :engine   aidbox/seed-v2
+  :resources
+  {:AccessPolicy {:allow-any-user {:engine "allow"}}}}}
 
