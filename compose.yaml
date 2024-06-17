@@ -80,3 +80,6 @@ services:
       volumes:
       - ./client:/app
       profiles: ["client"]
+    matchbox:
+      image: eu.gcr.io/fhir-ch/matchbox:v314
+      profiles: ["production"]
