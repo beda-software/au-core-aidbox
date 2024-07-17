@@ -68,7 +68,7 @@
 
   :fhir-version            "4.0.1"
   :features                features
-  :fhir-packages           "hl7-fhir-r4-core#4.0.1,hl7.fhir.au.core#0.4.1-preview"
+  :fhir-packages           "hl7-fhir-r4-core#4.0.1:hl7.fhir.au.core#0.4.1-preview"
   :compliant-mode-enabled? true
   :override-createdat-url  "http://fhir.aidbox.app/extension/createdat"
   :correct-aidbox-format   true
