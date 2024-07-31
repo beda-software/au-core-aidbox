@@ -28,4 +28,4 @@ AIDBOX_STDOUT_PRETTY=all
 BOX_FEATURES_FTR_PULL_ENABLE=false
 
 AIDBOX_FHIR_SCHEMA_VALIDATION=true
-AIDBOX_FHIR_PACKAGES=hl7.fhir.au.core#0.4.0-preview
+AIDBOX_FHIR_PACKAGES=hl7.fhir.r4.core#4.0.1:hl7.fhir.au.core#0.4.0-preview
