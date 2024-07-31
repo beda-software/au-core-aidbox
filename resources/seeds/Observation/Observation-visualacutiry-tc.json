@@ -1,0 +1,150 @@
+{
+    "category": [
+        {
+            "text": "Vision",
+            "coding": [
+                {
+                    "code": "exam",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                }
+            ]
+        }
+    ],
+    "referenceRange": [
+        {
+            "low": {
+                "code": "dB",
+                "unit": "dB",
+                "value": 0,
+                "system": "http://unitsofmeasure.org"
+            },
+            "high": {
+                "code": "dB",
+                "unit": "dB",
+                "value": 20,
+                "system": "http://unitsofmeasure.org"
+            },
+            "text": "Note",
+            "type": {
+                "text": "Treatment Range",
+                "coding": [
+                    {
+                        "code": "treatment",
+                        "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                        "display": "Treatment Range"
+                    }
+                ]
+            }
+        }
+    ],
+    "meta": {
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"
+        ]
+    },
+    "interpretation": [
+        {
+            "coding": [
+                {
+                    "code": "1240581000000104",
+                    "system": "http://snomed.info/sct",
+                    "display": "Severe acute respiratory syndrome coronavirus 2 detected (finding)"
+                }
+            ]
+        }
+    ],
+    "value": {
+        "CodeableConcept": {
+            "coding": [
+                {
+                    "code": "422256009",
+                    "system": "http://snomed.info/sct",
+                    "display": "Counts fingers - distance vision"
+                }
+            ]
+        }
+    },
+    "resourceType": "Observation",
+    "component": [
+        {
+            "code": {
+                "text": "RdRp gene detection",
+                "coding": [
+                    {
+                        "code": "94558-4",
+                        "system": "http://loinc.org",
+                        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory system specimen by Rapid immunoassay"
+                    }
+                ]
+            },
+            "value": {
+                "CodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "260373001",
+                            "system": "http://snomed.info/sct",
+                            "display": "Detected"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "note": [
+        {
+            "text": "Note"
+        }
+    ],
+    "status": "final",
+    "effective": {
+        "dateTime": "2024-05-23"
+    },
+    "id": "visualacurity-tc",
+    "code": {
+        "text": "Distance visual acuity",
+        "coding": [
+            {
+                "code": "251739003",
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "type": {
+                "text": "Placer Order Identifier",
+                "coding": [
+                    {
+                        "code": "PLAC",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "display": "Placer Identifier"
+                    }
+                ]
+            },
+            "value": "3451451243",
+            "system": "http://bobrestergp.example.com/order",
+            "assigner": {
+                "display": "Bobregster Medical Center QLD"
+            }
+        }
+    ],
+    "bodySite": {
+        "text": "Entire left eye",
+        "coding": [
+            {
+                "code": "362503005",
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    },
+    "subject": {
+        "id": "patient-tc",
+        "resourceType": "Patient"
+    },
+    "performer": [
+        {
+            "id": "practitioner-tc",
+            "resourceType": "Practitioner"
+        }
+    ]
+}
