@@ -146,5 +146,11 @@
             "id": "practitioner-tc",
             "resourceType": "Practitioner"
         }
+    ],
+    "hasMember": [
+        {
+            "id": "visualacurity-tc",
+            "resourceType": "Observation"
+        }
     ]
 }

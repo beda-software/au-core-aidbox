@@ -20,14 +20,14 @@
     "referenceRange": [
         {
             "low": {
-                "code": "Ct",
-                "unit": "Ct",
+                "code": "mmol/L",
+                "unit": "mmol/L",
                 "value": 10,
                 "system": "http://unitsofmeasure.org"
             },
             "high": {
-                "code": "Ct",
-                "unit": "Ct",
+                "code": "mmol/L",
+                "unit": "mmol/L",
                 "value": 30,
                 "system": "http://unitsofmeasure.org"
             },
@@ -163,6 +163,12 @@
         {
             "id": "practitionerrole-tc",
             "resourceType": "PractitionerRole"
+        }
+    ],
+    "hasMember": [
+        {
+            "id": "pathresult-tc",
+            "resourceType": "Observation"
         }
     ],
     "text": {
