@@ -28,7 +28,4 @@ jobs:
             echo "AIDBOX_BASE_URL=https://au-core.beda.software" >> .env
             echo "AIDBOX_ZEN_DEV_MODE=disable" >> .env
             echo "CERTBOT_EMAIL=$CERTBOT_EMAIL" >> .env
-            docker compose --profile production pull -q
-            docker compose --profile production stop
-            docker compose --profile production build
-            docker compose --profile production up -d
+            make restart_production
