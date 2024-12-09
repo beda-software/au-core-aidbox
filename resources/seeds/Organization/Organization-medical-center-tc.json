@@ -36,6 +36,19 @@
     "identifier": [
         {
             "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "XX"
+                    }
+                ],
+                "text": "ABN"
+            },
+            "system": "http://hl7.org.au/id/abn",
+            "value": "81117277206"
+        },
+        {
+            "type": {
                 "text": "HPI-O",
                 "coding": [
                     {
