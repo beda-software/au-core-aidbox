@@ -94,11 +94,6 @@
                 "code": "716186003",
                 "system": "http://snomed.info/sct",
                 "display": "No known allergy"
-            },
-            {
-                "code": "no-known-allergies",
-                "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
-                "display": "No known allergies"
             }
         ]
     },
