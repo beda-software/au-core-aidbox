@@ -51,7 +51,7 @@
         }
     ],
     "status": "completed",
-    "id": "procedure-tc",
+    "id": "procedure-tc-2",
     "recorder": {
         "id": "practitioner-tc",
         "resourceType": "Practitioner"
