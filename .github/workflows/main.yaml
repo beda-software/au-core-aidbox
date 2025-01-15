@@ -1,5 +1,6 @@
 name: Deploy Aidbox with AU Core profile
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
