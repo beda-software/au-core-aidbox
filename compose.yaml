@@ -1,6 +1,6 @@
 services:
     aidbox:
-        image: healthsamurai/aidboxone:edge
+        image: healthsamurai/aidboxone:stable
         depends_on:
             - aidbox-db
             - build-seeds
