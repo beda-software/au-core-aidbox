@@ -89,3 +89,13 @@ services:
     smile-emr:
       image: registry.beda.software/emr/smile-digital-health-demo:latest
       profiles: ["production"]
+    aups:
+      image: ghcr.io/beda-software/au-ps-summary-op:57adc7633f7c4fc41bc7ae86661531babce857dd
+      env_file:
+            - ./env/aups
+      depends_on:
+        aidbox-healthcheck:
+          condition:
+            service_healthy
+    
+
