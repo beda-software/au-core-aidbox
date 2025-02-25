@@ -92,8 +92,7 @@ services:
     aups:
       image: ghcr.io/beda-software/au-ps-summary-op:33751833af188b78dda7bc16901888d4534f1828
       env_file:
-      - ./env/aups
-      - .env
+            - ./env/aups
       depends_on:
         aidbox-healthcheck:
           condition:
