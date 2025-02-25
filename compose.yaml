@@ -90,7 +90,7 @@ services:
       image: registry.beda.software/emr/smile-digital-health-demo:latest
       profiles: ["production"]
     aups:
-      image: ghcr.io/beda-software/au-ps-summary-op:57adc7633f7c4fc41bc7ae86661531babce857dd
+      image: ghcr.io/beda-software/au-ps-summary-op:33751833af188b78dda7bc16901888d4534f1828
       env_file:
       - ./env/aups
       - .env
