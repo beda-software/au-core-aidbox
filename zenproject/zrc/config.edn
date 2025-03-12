@@ -93,7 +93,10 @@
             {:name        "Root client"
              :secret      #env AIDBOX_CLIENT_SECRET
              :first_party true
-             :grant_types ["basic"]}}
+             :grant_types ["basic"]}
+            :web {:auth {:implicit {:redirect_uri #env FHIR_EMR_AUTH_URL}}
+                  :first_party true
+                  :grant_types [:implicit]}}
 
    :AccessPolicy {:allow-root-client
                   {:engine "allow"
