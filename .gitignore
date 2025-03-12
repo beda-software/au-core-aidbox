@@ -7,3 +7,4 @@ smart/node_modules
 .clj-kondo/
 .lsp/
 .idea/
+seeds-data.ndjson.gz
