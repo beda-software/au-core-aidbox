@@ -1,0 +1,15 @@
+{
+  "name": "practitioner",
+  "user": {
+    "id": "practitioner-tc",
+    "resourceType": "User"
+  },
+  "links": {
+    "practitioner": {
+      "id": "practitioner-tc",
+      "resourceType": "Practitioner"
+    }
+  },
+  "id": "basic-practitioner-tc",
+  "resourceType": "Role"
+}

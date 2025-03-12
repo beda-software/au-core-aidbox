@@ -1,0 +1,9 @@
+{
+  "fhirUser": {
+    "id": "practitioner-tc",
+    "resourceType": "Practitioner"
+  },
+  "password": "$s0$f0801$4smUH8iaFN37LjYVgf2fyw==$/TyfQ+2oGG+m9zb2zTMbA7Fj8JeLkaPD54Rpw19vyHY=",
+  "id": "practitioner-tc",
+  "resourceType": "User"
+}
