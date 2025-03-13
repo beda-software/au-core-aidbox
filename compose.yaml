@@ -47,6 +47,7 @@ services:
       - ./nginx:/etc/nginx/user_conf.d:ro
       - ./letsencrypt:/etc/letsencrypt
       - ./assets:/www/assets:ro
+      - /root/emr-au-core-static/build:/www/data:ro
       environment:
         CERTBOT_EMAIL: ${CERTBOT_EMAIL}
       depends_on:
