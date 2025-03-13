@@ -87,9 +87,6 @@ services:
     smart-form-ide:
       image: ghcr.io/beda-software/smart-form-ide:latest
       profiles: ["production"]
-    smile-emr:
-      image: registry.beda.software/emr/smile-digital-health-demo:latest
-      profiles: ["production"]
     aups:
       image: ghcr.io/beda-software/au-ps-summary-op:07bbd4fbe6e8a7916353b2bceafd5bf8bc9d6aae
       env_file:
