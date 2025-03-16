@@ -1,6 +1,6 @@
 CREATE_MANIFEST_ATTRS="False"
 APP_INIT_CLIENT_ID=appadmin
-APP_INIT_URL=https://aucore.aidbox.beda.software
+APP_INIT_URL=https://erequesting.aidbox.beda.software
 
 APP_ID=sdc
 APP_URL=https://ereqsdc.au-core.beda.software
