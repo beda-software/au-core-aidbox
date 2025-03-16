@@ -107,19 +107,19 @@ services:
             - .env
     aucoresdc:
       profiles: ["production"]
-      image: bedasoftware/fhir-sdc:1.0.0-fpml2
+      image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
       env_file:
             - ./env/aucoresdc
             - .env
     ereqsdc:
       profiles: ["production"]
-      image: bedasoftware/fhir-sdc:1.0.0-fpml2
+      image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
       env_file:
             - ./env/ereqsdc
             - .env
     smartonfhirsdc:
       profiles: ["production"]
-      image: bedasoftware/fhir-sdc:1.0.0-fpml2
+      image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
       env_file:
             - ./env/smartonfhirsdc
             - .env
