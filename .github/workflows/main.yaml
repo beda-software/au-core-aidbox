@@ -31,6 +31,8 @@ jobs:
           script_stop: true
           script: |
             cd ~/au-core-aidbox
+            git fetch --all
+            git checkout $GITHUB_REF_NAME
             git pull
             echo "AIDBOX_LICENSE=$AIDBOX_LICENSE" > .env
             echo "BOX_FEATURES_FTR_PULL_ENABLE=true" >> .env
