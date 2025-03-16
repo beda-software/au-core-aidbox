@@ -14,6 +14,11 @@ jobs:
         env:
           AIDBOX_LICENSE: ${{secrets.AIDBOX_LICENSE}}
           CERTBOT_EMAIL: ${{secrets.CERTBOT_EMAIL}}
+          APP_INIT_CLIENT_SECRET: ${{secrets.APP_INIT_CLIENT_SECRET}}
+          APP_SECRET: ${{secrets.APP_SECRET}}
+          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
         with:
           host: ${{secrets.REMOTE_HOST}}
           username: ${{secrets.REMOTE_USER}}
