@@ -19,7 +19,10 @@ jobs:
           username: ${{secrets.REMOTE_USER}}
           key: ${{secrets.PRIVATE_KEY}}
           envs: >
-            AIDBOX_LICENSE,CERTBOT_EMAIL
+            AIDBOX_LICENSE,CERTBOT_EMAIL,
+            APP_INIT_CLIENT_SECRET,APP_SECRET,
+            AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY,
+            OPENAI_API_KEY
           script_stop: true
           script: |
             cd ~/au-core-aidbox
@@ -29,4 +32,9 @@ jobs:
             echo "AIDBOX_BASE_URL=https://au-core.beda.software" >> .env
             echo "AIDBOX_ZEN_DEV_MODE=disable" >> .env
             echo "CERTBOT_EMAIL=$CERTBOT_EMAIL" >> .env
+            echo "APP_INIT_CLIENT_SECRET=$APP_INIT_CLIENT_SECRET" >> .env
+            echo "APP_SECRET=$APP_SECRET" >> .env
+            echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> .env
+            echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> .env
+            echo "OPENAI_API_KEY=$OPENAI_API_KEY" >> .env
             make restart_production

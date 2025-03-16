@@ -1,8 +1,9 @@
+CREATE_MANIFEST_ATTRS="False"
 APP_INIT_CLIENT_ID=appadmin
 APP_INIT_URL=https://aucore.aidbox.beda.software
-APP_ID=aups
-APP_URL=https://aups.au-core.beda.software
+
+APP_ID=sdc
+APP_URL=https://aucoresdc.au-core.beda.software
 APP_PORT=8081
 AIO_PORT=8081
 AIO_HOST=0.0.0.0
-AI_SCRIBER_URL=https://scribe.au-core.beda.software

@@ -88,12 +88,38 @@ services:
       image: ghcr.io/beda-software/smart-form-ide:latest
       profiles: ["production"]
     aups:
-      image: ghcr.io/beda-software/au-ps-summary-op:07bbd4fbe6e8a7916353b2bceafd5bf8bc9d6aae
+      profiles: ["production"]
+      image: registry.beda.software/emr/aups:v0.0.1-preview
       env_file:
             - ./env/aups
-      depends_on:
-        aidbox-healthcheck:
-          condition:
-            service_healthy
-    
-
+            - .env
+    awsuploader:
+      profiles: ["production"]
+      image: ghcr.io/beda-software/aidbox-file-uploader:latest
+      env_file:
+            - ./env/awsuploader
+            - .env
+    scribe:
+      profiles: ["production"]
+      image: registry.beda.software/emr/ai-scribe:0.2.0
+      env_file:
+            - ./env/scribe
+            - .env
+    aucoresdc:
+      profiles: ["production"]
+      image: bedasoftware/fhir-sdc:1.0.0-fpml1
+      env_file:
+            - ./env/aucoresdc
+            - .env
+    ereqsdc:
+      profiles: ["production"]
+      image: bedasoftware/fhir-sdc:1.0.0-fpml1
+      env_file:
+            - ./env/ereqsdc
+            - .env
+    smartonfhirsdc:
+      profiles: ["production"]
+      image: bedasoftware/fhir-sdc:1.0.0-fpml1
+      env_file:
+            - ./env/smartonfhirsdc
+            - .env

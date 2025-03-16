@@ -1,0 +1,12 @@
+APP_INIT_CLIENT_ID=appadmin
+APP_INIT_URL=https://aucore.aidbox.beda.software
+
+APP_ID=awsuploader
+APP_URL=https://awsuploader.au-core.beda.software
+APP_PORT=8081
+AIO_PORT=8081
+AIO_HOST=0.0.0.0
+
+MINIO_ENDPOINT=https://aupsdocrefdev.syd1.digitaloceanspaces.com
+AWS_BUCKET=aupsdocrefdev
+REGION_NAME=syd1
