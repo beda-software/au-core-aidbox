@@ -7,3 +7,5 @@ APP_URL=https://aucoresdc.au-core.beda.software
 APP_PORT=8081
 AIO_PORT=8081
 AIO_HOST=0.0.0.0
+JUTE_SERVICE=jute
+FHIRPATH_MAPPING_SERVICE=fpml
