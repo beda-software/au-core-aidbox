@@ -89,7 +89,7 @@ services:
       profiles: ["production"]
     aups:
       profiles: ["production"]
-      image: registry.beda.software/emr/aups:0.0.2-preview
+      image: registry.beda.software/emr/aups:0.0.3-preview
       env_file:
             - ./env/aups
             - .env
