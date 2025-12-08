@@ -1,0 +1,1 @@
+TOKEN_VALIDATION_ENDPOINT=https://api.test.medirecords.com/fhir/v1/Patient\?_count\=1

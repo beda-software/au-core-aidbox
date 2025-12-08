@@ -19,6 +19,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
+          TOKEN_INTROSPECTION_SERVICE_AUTH_TOKEN: ${{secrets.TOKEN_INTROSPECTION_SERVICE_AUTH_TOKEN}}
         with:
           host: ${{secrets.REMOTE_HOST}}
           username: ${{secrets.REMOTE_USER}}
@@ -27,7 +28,7 @@ jobs:
             AIDBOX_LICENSE,CERTBOT_EMAIL,
             APP_INIT_CLIENT_SECRET,APP_SECRET,
             AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY,
-            OPENAI_API_KEY
+            OPENAI_API_KEY,TOKEN_INTROSPECTION_SERVICE_AUTH_TOKEN
           script_stop: true
           script: |
             cd ~/au-core-aidbox
@@ -44,4 +45,5 @@ jobs:
             echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> .env
             echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> .env
             echo "OPENAI_API_KEY=$OPENAI_API_KEY" >> .env
+            echo "TOKEN_INTROSPECTION_SERVICE_AUTH_TOKEN=$TOKEN_INTROSPECTION_SERVICE_AUTH_TOKEN" >> .env
             make restart_production

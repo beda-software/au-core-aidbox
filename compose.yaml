@@ -1,125 +1,138 @@
 services:
-    aidbox:
-        image: healthsamurai/aidboxone:edge
-        depends_on:
-            - aidbox-db
-            - build-seeds
-        links:
-            - 'aidbox-db:database'
-        ports:
-            - '127.0.0.1:8080:8080'
-        env_file:
-            - ./env/aidbox
-            - .env
-        volumes:
-            - ./zenproject:/zenproject
-    aidbox-db:
-        image: 'healthsamurai/aidboxdb:13.2'
-        environment:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: postgres
-            POSTGRES_DB: aidbox
-    aidbox-healthcheck:
-        image: curlimages/curl
-        entrypoint: /bin/sleep 10000
-        links:
-            - aidbox
-        depends_on:
-            - aidbox
-        healthcheck:
-            test: curl --fail http://aidbox:8080/health || exit 1
-            interval: 5s
-            timeout: 30s
-            retries: 100
-    build-seeds:
-        build:
-            context: .
-            dockerfile: Dockerfile.seeds
-        volumes:
-            - ./zenproject:/app/zenproject
-            - ./resources/seeds:/app/resources/seeds
-    nginx:
-      image: jonasal/nginx-certbot
-      ports:
+  aidbox:
+    image: healthsamurai/aidboxone:edge
+    depends_on:
+      - aidbox-db
+      - build-seeds
+    links:
+      - "aidbox-db:database"
+    ports:
+      - "127.0.0.1:8080:8080"
+    env_file:
+      - ./env/aidbox
+      - .env
+    volumes:
+      - ./zenproject:/zenproject
+  aidbox-db:
+    image: "healthsamurai/aidboxdb:13.2"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: aidbox
+  aidbox-healthcheck:
+    image: curlimages/curl
+    entrypoint: /bin/sleep 10000
+    links:
+      - aidbox
+    depends_on:
+      - aidbox
+    healthcheck:
+      test: curl --fail http://aidbox:8080/health || exit 1
+      interval: 5s
+      timeout: 30s
+      retries: 100
+  build-seeds:
+    build:
+      context: .
+      dockerfile: Dockerfile.seeds
+    volumes:
+      - ./zenproject:/app/zenproject
+      - ./resources/seeds:/app/resources/seeds
+  nginx:
+    image: jonasal/nginx-certbot
+    ports:
       - "80:80"
       - "443:443"
-      volumes:
+    volumes:
       - ./nginx:/etc/nginx/user_conf.d:ro
       - ./letsencrypt:/etc/letsencrypt
       - ./assets:/www/assets:ro
       - /root/emr-au-core-static/build:/www/data:ro
-      environment:
-        CERTBOT_EMAIL: ${CERTBOT_EMAIL}
-      depends_on:
-        aidbox-healthcheck:
-          condition:
-            service_healthy
-      profiles: ["production"]
-    smart-app-deps:
-      image: node:18
-      command: bash -c "cd /app && npm install"
-      volumes:
+    environment:
+      CERTBOT_EMAIL: ${CERTBOT_EMAIL}
+    depends_on:
+      aidbox-healthcheck:
+        condition: service_healthy
+      token-introspector:
+        condition: service_healthy
+    profiles: ["production"]
+  smart-app-deps:
+    image: node:18
+    command: bash -c "cd /app && npm install"
+    volumes:
       - ./smart:/app
-      profiles: ["smart-app"]
-    smart-app:
-      build: ./smart
-      env_file:
-          - .env
-      command: npm run dev
-      ports: 
+    profiles: ["smart-app"]
+  smart-app:
+    build: ./smart
+    env_file:
+      - .env
+    command: npm run dev
+    ports:
       - "5173:5173"
-      volumes:
+    volumes:
       - ./smart:/app
-      depends_on:
-        smart-app-deps:
-          condition: service_completed_successfully
-      profiles: ["smart-app"]
-    client:
-      build: ./client
-      ports:
+    depends_on:
+      smart-app-deps:
+        condition: service_completed_successfully
+    profiles: ["smart-app"]
+  client:
+    build: ./client
+    ports:
       - "8888:8888"
-      volumes:
+    volumes:
       - ./client:/app
-      profiles: ["client"]
-    matchbox:
-      image: eu.gcr.io/fhir-ch/matchbox:v314
-      profiles: ["production"]
-    smart-form-ide:
-      image: ghcr.io/beda-software/smart-form-ide:latest
-      profiles: ["production"]
-    aups:
-      profiles: ["production"]
-      image: registry.beda.software/emr/aups:0.0.7-preview
-      env_file:
-            - ./env/aups
-            - .env
-    awsuploader:
-      profiles: ["production"]
-      image: ghcr.io/beda-software/aidbox-file-uploader:latest
-      env_file:
-            - ./env/awsuploader
-            - .env
-    scribe:
-      profiles: ["production"]
-      image: registry.beda.software/emr/ai-scribe:0.2.0
-      env_file:
-            - ./env/scribe
-            - .env
-    aucoresdc:
-      profiles: ["production"]
-      image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
-      env_file:
-            - ./env/aucoresdc
-            - .env
-    ereqsdc:
-      profiles: ["production"]
-      image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
-      env_file:
-            - ./env/ereqsdc
-            - .env
-    smartonfhirsdc:
-      profiles: ["production"]
-      image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
-      env_file:
-            - ./env/smartonfhirsdc
-            - .env
+    profiles: ["client"]
+  matchbox:
+    image: eu.gcr.io/fhir-ch/matchbox:v314
+    profiles: ["production"]
+  smart-form-ide:
+    image: ghcr.io/beda-software/smart-form-ide:latest
+    profiles: ["production"]
+  aups:
+    profiles: ["production"]
+    image: registry.beda.software/emr/aups:0.0.7-preview
+    env_file:
+      - ./env/aups
+      - .env
+  awsuploader:
+    profiles: ["production"]
+    image: ghcr.io/beda-software/aidbox-file-uploader:latest
+    env_file:
+      - ./env/awsuploader
+      - .env
+  scribe:
+    profiles: ["production"]
+    image: registry.beda.software/emr/ai-scribe:0.2.0
+    env_file:
+      - ./env/scribe
+      - .env
+  aucoresdc:
+    profiles: ["production"]
+    image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
+    env_file:
+      - ./env/aucoresdc
+      - .env
+  ereqsdc:
+    profiles: ["production"]
+    image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
+    env_file:
+      - ./env/ereqsdc
+      - .env
+  smartonfhirsdc:
+    profiles: ["production"]
+    image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
+    env_file:
+      - ./env/smartonfhirsdc
+      - .env
+  token-introspector:
+    image: registry.beda.software/emr/token-introspection-service:main
+    env_file:
+      - ./env/token-introspector
+    environment:
+      AUTH_TOKEN: ${TOKEN_INTROSPECTION_SERVICE_AUTH_TOKEN}
+    profiles: ["production"]
+    healthcheck:
+      test: curl --fail http://localhost:8081/health || exit 1
+      interval: 5s
+      timeout: 10s
+      retries: 10
