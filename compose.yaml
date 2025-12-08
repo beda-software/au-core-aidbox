@@ -2,8 +2,10 @@ services:
   aidbox:
     image: healthsamurai/aidboxone:edge
     depends_on:
-      - aidbox-db
-      - build-seeds
+      aidbox-db:
+        condition: service_healthy
+      build-seeds:
+        condition: service_completed_successfully
     links:
       - "aidbox-db:database"
     ports:
@@ -13,24 +15,22 @@ services:
       - .env
     volumes:
       - ./zenproject:/zenproject
+    healthcheck:
+      test: curl --fail http://localhost:8080/health || exit 1
+      interval: 5s
+      timeout: 30s
+      retries: 50
   aidbox-db:
     image: "healthsamurai/aidboxdb:13.2"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: aidbox
-  aidbox-healthcheck:
-    image: curlimages/curl
-    entrypoint: /bin/sleep 10000
-    links:
-      - aidbox
-    depends_on:
-      - aidbox
     healthcheck:
-      test: curl --fail http://aidbox:8080/health || exit 1
+      test: ["CMD", "pg_isready", "-U", "postgres"]
       interval: 5s
-      timeout: 30s
-      retries: 100
+      timeout: 5s
+      retries: 10
   build-seeds:
     build:
       context: .
@@ -51,7 +51,7 @@ services:
     environment:
       CERTBOT_EMAIL: ${CERTBOT_EMAIL}
     depends_on:
-      aidbox-healthcheck:
+      aidbox:
         condition: service_healthy
       token-introspector:
         condition: service_healthy
@@ -109,6 +109,9 @@ services:
     env_file:
       - ./env/aucoresdc
       - .env
+    depends_on:
+      aucore-aidbox:
+        condition: service_healthy
   ereqsdc:
     profiles: ["production"]
     image: bedasoftware/fhir-sdc:1.0.0-sydney-18-03-2025-1
@@ -133,3 +136,18 @@ services:
       interval: 5s
       timeout: 10s
       retries: 10
+  aucore-aidbox:
+    image: healthsamurai/aidboxone:edge
+    profiles: ["production"]
+    depends_on:
+      aidbox-db:
+        condition: service_healthy
+    env_file:
+      - ./env/aucore-aidbox
+    environment:
+      AIDBOX_LICENSE: ${AUCORE_AIDBOX_LICENSE}
+    healthcheck:
+      test: curl --fail http://localhost:8080/health || exit 1
+      interval: 5s
+      timeout: 30s
+      retries: 50
