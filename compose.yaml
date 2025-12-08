@@ -82,9 +82,6 @@ services:
     volumes:
       - ./client:/app
     profiles: ["client"]
-  matchbox:
-    image: eu.gcr.io/fhir-ch/matchbox:v314
-    profiles: ["production"]
   smart-form-ide:
     image: ghcr.io/beda-software/smart-form-ide:latest
     profiles: ["production"]
