@@ -26,8 +26,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: aidbox
-    volumes:
-      - ./init-db:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postgres"]
       interval: 5s
@@ -144,6 +142,8 @@ services:
     depends_on:
       aidbox-db:
         condition: service_healthy
+      aidbox-create-dbs:
+        condition: service_completed_successfully
     env_file:
       - ./env/aucore-aidbox
     environment:
@@ -153,3 +153,17 @@ services:
       interval: 5s
       timeout: 30s
       retries: 50
+  aidbox-create-dbs:
+    image: postgres:13.2
+    command: ["/usr/bin/create-db.sh"]
+    environment:
+      PGHOST: aidbox-db
+      PGPORT: 5432
+      PGUSER: postgres
+      PGPASSWORD: postgres
+    depends_on:
+      aidbox-db:
+        condition: service_healthy
+    volumes:
+      - ./create-db.sh:/usr/bin/create-db.sh
+    profiles: ["production"]
