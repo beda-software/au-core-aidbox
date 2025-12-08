@@ -102,7 +102,7 @@ services:
       - .env
   scribe:
     profiles: ["production"]
-    image: registry.beda.software/emr/ai-scribe:0.2.0
+    image: registry.beda.software/emr/ai-scribe:0.4.2
     env_file:
       - ./env/scribe
       - .env
